@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import sys
 import mysql.connector
 import dominate
 from dominate.tags import *
@@ -129,7 +130,6 @@ def write_composer_html(composer,  newonly):
     with chtml.head:
         title = full_name
         raw('<meta charset="utf-8" />')
-        link(rel='stylesheet', href='../newsp.css')
     composer_link = full_composer_link(composer[0], composer[2], composer[1], composer[3], composer[4])
     #book_list = find_books(composer[0])
     piece_table = find_pieces(composer[0])

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import mysql.connector
 import dominate
+import sys
 from dominate.tags import *
 from dominate.util import *
 from datetime import *
@@ -79,7 +80,6 @@ def write_piece_html(piece,  newonly):
     with phtml.head:
         title = piece[1]
         raw('<meta charset="utf-8" />')
-        link(rel='stylesheet', href='../newsp.css')
     ptitle = piece_link(piece[0], piece[1])
     composer = full_composer_link(piece[2], piece[3], piece[4], piece[5], piece[6])
     if piece[17]:

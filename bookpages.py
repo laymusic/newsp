@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import sys
 import mysql.connector
 import dominate
 from dominate.tags import *
@@ -132,7 +133,6 @@ def write_book_html(book):
     with bhtml.head:
         title = book_title
         raw('<meta charset="utf-8" />')
-        link(rel='stylesheet', href='../newsp.css')
     book_link = make_link(book_title, book_file)
     query_string = "select * from composer where composer_id = %d" % book[2]
     value = cursor.execute(query_string)

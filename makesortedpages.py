@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import sys
 import mysql.connector
 import dominate
 from dominate.tags import *
@@ -97,7 +98,6 @@ def write_head(html, ptitle):
     with html:
         title = ptitle
         raw('<meta charset="utf-8" />')
-        link(rel='stylesheet', href='../newsp.css')
         link(rel="shortcut icon", type="image/ico", href="images/favicon.ico")
 
 
