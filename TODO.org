@@ -1,0 +1,62 @@
+<2025-05-02 Fri 12:14> Look into why the piece pages for 248, 182, and
+178 didn't get rebuilt, although there were no error messages and the
+other piece pages were built.
+
+<2025-05-02 Fri 12:19>
+
+The below is inserted from the April 28, 2020 TODO.  Some of it might
+have gone away by itself.
+
+Current pcab_table doesn't work right when piece is in two different books.
+
+#change lastmodified_short to not print pieces which are in top ten newest.
+
+* TODO [#A] byparts.html and bycomposer.html should have subheaders and menu
+
+#I should get the titles right on lastmodified-full and byparts.html
+
+why is last modified date not on the recent Rore's?
+# the program adding those dates was bombing on some garbage input, but it still doesn't have the rore's but it does have a recent Josquin.
+
+Make lastmodified.py  more robust in dealing with garbage input.
+
+database should be cleaned up, with books, ordinals, parts, composer last names... canonical
+	        fix  up links to html pages and sale pages in book table
+
+Logic of makesortedpages.py should be cleaned up, with repeated code modularized.
+And code shared between py files should be librarified.
+
+#Write piecepages.py
+#       add accesses and modified info
+#	debug why accesses is the same for all files of a piece
+#  	Make filename in accesses table a link to the file
+	Test -n option
+	put logic to not print comment if there isn't one.
+	
+	    This is a puzzlement; None is supposed to be a boolean false,
+	    but it's printing anyway; the same logic works to not write NULL
+	    composer comments.
+	Right-justify number of Downloads
+
+#Write composerpages.py
+      look up books with composer as author (low priority since they'll be
+      in the pieces lines; it isn't there in current drupal site)
+      test -n option
+
+#Write bookpages.py
+#    table has headers for every row.
+
+    I got it to run clean by removing nonexistent composers and piecs
+    in the Book_Pieces_Table.  Should have it emit error messages and
+    continue.
+
+Write css.
+#      Modify color scheme in twocolumn.css from the pre-drupal serpentpublications.org
+#       	      sortedpages.py has it; need to modify other pages to put it in
+* TODO [#A]      Write css grid logic to get something like the drupal serpentpublications.org.
+      	    Unless I decide to  go with the Hugo book theme and my old css.
+      
+#Put everything under source control. 
+  #local git repository.  If anyone else really wanted to work on this,
+  #I'd put it up on github, or at least a git repository on
+  #serpentpublication.org
