@@ -1,6 +1,23 @@
-<2025-05-02 Fri 12:14> Look into why the piece pages for 248, 182, and
-178 didn't get rebuilt, although there were no error messages and the
-other piece pages were built.
+<2025-05-15 Thu> am now using wp-cli to add html files to a wordpress
+site.  Lots of things to do:
+* write script to do this; figure out whether you're adding or updating a post; make a databas about what post number a given file is.
+* set up wordpress theme to have the column with navigation stuff, and pretty colors, maybe images, etc.
+* currently using wordpress on my system; when we implement will need a wordpress somewhere else that we trust.
+     (Can't use wordpress.com with wp-cli unless I pay them lots of
+     money)
+     
+
+#<2025-05-02 Fri 12:33>
+#I know there are more than three "Triumphs of Oriana" pieces in book
+#Number 34.  
+
+<2025-05-15 Thu> Turned out to be the database.
+
+#<2025-05-02 Fri 12:14> Look into why the piece pages for 248, 182, and
+#178 didn't get rebuilt, although there were no error messages and the
+#other piece pages were built.
+
+<2025-05-15 Thu> Because they aren't there.
 
 <2025-05-02 Fri 12:19>
 
@@ -50,13 +67,17 @@ And code shared between py files should be librarified.
     in the Book_Pieces_Table.  Should have it emit error messages and
     continue.
 
-Write css.
+#Write css.
 #      Modify color scheme in twocolumn.css from the pre-drupal serpentpublications.org
 #       	      sortedpages.py has it; need to modify other pages to put it in
 * TODO [#A]      Write css grid logic to get something like the drupal serpentpublications.org.
       	    Unless I decide to  go with the Hugo book theme and my old css.
-      
+<2025-05-15 Thu> have decided to let wordpress do this
+
 #Put everything under source control. 
   #local git repository.  If anyone else really wanted to work on this,
   #I'd put it up on github, or at least a git repository on
   #serpentpublication.org
+
+<2025-05-15 Thu> The directory ~/newsp is now under git and has been
+  #pushed to github.  
